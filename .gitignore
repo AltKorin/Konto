@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+db.sqlite3
+.env
+staticfiles/
+frontend/node_modules/
+frontend/dist/
+deploy/oidc/
+deploy/cloudflared/
+deploy/backups/
+.dev-konta.txt
+# dokumentacja wewnętrzna (adresy serwerów, osoby, ustalenia) — zostaje w folderze projektu, nie w gicie
+HANDOFF.md
+SUMMARY.md
+deploy/PROXMOX.md

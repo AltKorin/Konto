@@ -1,0 +1,11 @@
+.venv
+**/node_modules
+frontend/dist
+db.sqlite3
+staticfiles
+.env
+.dev-konta.txt
+**/__pycache__
+deploy/cloudflared
+deploy/oidc
+deploy/backups

@@ -1,0 +1,37 @@
+{
+  "_opis": "Rejestr produktów pakietu sudomie. Kod = klucz w claimie firmy[].produkty. Role = lista ról, które produkt rozumie (pierwsza = najszersza). Zmiana listy = zmiana tego pliku + `manage.py wczytaj_produkty`.",
+  "grafik": {
+    "nazwa": "Grafik",
+    "adres": "https://grafik.sudomie.pl",
+    "role": ["dyrektor", "kierownik", "pracownik"]
+  },
+  "kalendarz": {
+    "nazwa": "Kalendarz przyjęć",
+    "adres": "https://kalendarz.sudomie.pl",
+    "role": ["kierownik", "obsluga"]
+  },
+  "grupy": {
+    "nazwa": "Grupy",
+    "adres": "https://grupy.sudomie.pl",
+    "role": ["uzytkownik"],
+    "_do_ustalenia": "role przy podpinaniu (#768)"
+  },
+  "foodcost": {
+    "nazwa": "FoodCost",
+    "adres": "https://fc.sudomie.pl",
+    "role": ["uzytkownik"],
+    "_do_ustalenia": "role przy podpinaniu (#768)"
+  },
+  "inndesk": {
+    "nazwa": "InnDesk",
+    "adres": "https://inndesk.pl",
+    "role": ["uzytkownik"],
+    "_do_ustalenia": "role przy podpinaniu (#768)"
+  },
+  "hotelagenda": {
+    "nazwa": "HotelAgenda",
+    "adres": "https://agenda.sudomie.pl",
+    "role": ["uzytkownik"],
+    "_do_ustalenia": "role przy podpinaniu (#768)"
+  }
+}

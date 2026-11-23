@@ -20,8 +20,10 @@ Klucz z `deploy/oidc/klucz.pem` jest jedynym sekretem, którego utrata wylogowuj
 ```sh
 docker compose up -d --build
 curl -fsS http://127.0.0.1:8097/zdrowie/     # "ok"
-docker compose up -d --build                 # (ten sam krok) — obraz czyta klucz z wolumenu montowanego w compose
 ```
+
+Bez HTTPS (pierwsze uruchomienie na laptopie) ustaw w `.env` `DJANGO_SSL_REDIRECT=0` i
+`DJANGO_ALLOWED_HOSTS=localhost,127.0.0.1`.
 
 Kontener sam zrobi migracje, tabelę cache i wczyta rejestr produktów z `produkty.json`. Baza leży na wolumenie
 `konto_data` (`/data`).

@@ -1,5 +1,7 @@
 # Konto sudomie
 
+[![CI](https://github.com/AltKorin/Konto/actions/workflows/ci.yml/badge.svg)](https://github.com/AltKorin/Konto/actions/workflows/ci.yml)
+
 Jeden login dla narzędzi sudomie (Grafik, Kalendarz przyjęć, HotelAgenda i kolejne):
 
 - **dostawca OIDC** dla aplikacji rodziny (`django-oauth-toolkit`, PKCE, `scope=openid profile email`),

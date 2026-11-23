@@ -18,6 +18,7 @@ Django 6.1, Inertia.js + React 19 + Vite, django-oauth-toolkit, django-simple-hi
 ## Uruchomienie lokalnie
 
 ```sh
+cp .env.example .env        # opcjonalnie: bez niego działają wartości domyślne (dev)
 python -m venv .venv && .venv/bin/pip install -r requirements.txt
 cd frontend && npm ci && npm run build && cd ..
 .venv/bin/python manage.py migrate
@@ -29,6 +30,11 @@ Klienta OIDC dla aplikacji zakłada `manage.py klient_oidc` (wypisuje `OIDC_CLIE
 klienta API — `manage.py klient_api`. Konfiguracja poczty przez `EMAIL_*` (lokalnie: konsola).
 
 Testy: `.venv/bin/python -m pytest -q tests`.
+
+## Wdrożenie
+
+Docker: patrz [`WDROZENIE.md`](WDROZENIE.md) — zmienne (`cp .env.example .env`), reverse proxy/TLS,
+kopie zapasowe, aktualizacja i typowe problemy.
 
 ## Licencja
 

@@ -6,5 +6,6 @@ cd "$(dirname "$0")/.."
 mkdir -p deploy/oidc
 if [ -f deploy/oidc/klucz.pem ]; then echo "Klucz już jest — nie nadpisuję."; exit 0; fi
 ( umask 077 && openssl genrsa -out deploy/oidc/klucz.pem 2048 2>/dev/null )
-chown -R 1000:1000 deploy/oidc && chmod 500 deploy/oidc && chmod 400 deploy/oidc/klucz.pem   # uid 1000 = app w kontenerze
+chmod 500 deploy/oidc && chmod 400 deploy/oidc/klucz.pem   # uid 1000 = app w kontenerze
+[ "$(id -u)" = 0 ] && chown -R 1000:1000 deploy/oidc || true  # jako root; zwykły użytkownik zwykle też ma uid 1000
 echo "Gotowe: deploy/oidc/klucz.pem"
